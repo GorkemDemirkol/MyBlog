@@ -1,0 +1,83 @@
+.sidebar {
+    flex: 3;
+    font-family: "Arvo", serif;
+    text-align: center;
+
+}
+
+.sidebar .area {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+
+}
+
+.sidebar h2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 15px;
+    font-family: "Pacifico", cursive;
+    position: relative;
+
+}
+
+.sidebar h2::after {
+    content: '';
+    width: 50%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: -5px;
+}
+
+.sidebar img {
+    padding: 10px;
+    height: 300px;
+    border-radius: 20px;
+
+}
+
+.sidebar .categories {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.sidebar .area .categories span {
+    background-color: rgba(0, 0, 0, 0.03);
+    display: block;
+    width: calc(50% - 10px);
+    padding: 2px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.sidebar .categories span:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.sidebar a {
+    background-color: rgba(0, 0, 0, 0.03);
+    display: block;
+    width: 100%;
+    padding: 2px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-family: "Dancing script", cursive;
+    font-weight: 700;
+}
+
+.sidebar a:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+.sidebar .area{
+    opacity: 0;
+    transition: all 0.5s;
+}
+.sidebar .area.active{
+    opacity: 1;
+}

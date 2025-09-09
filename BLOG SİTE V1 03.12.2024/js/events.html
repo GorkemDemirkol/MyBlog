@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 20px;
+            text-align: center;
+        }
+        ul{
+            list-style: none;
+        }
+        span{
+            display: none;
+        }
+        input{
+            border-radius: 10px;
+            color: rgba(0, 0, 0, 0.3);
+        }
+        div{
+            background-color: brown;
+            height: 50px;
+            width: 100px;
+        }
+        #d1{
+            border: 1px solid black;
+            height: 200px;
+            width: 200px;
+        }
+        #d2{
+            background-color: aliceblue;
+            height: 100px;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body onclick="hareketEttir(event)">
+    
+
+<!-- <body onclick="tik.innerText='üzerine tıklandı: '+ event.target.nodeName" > -->
+    <header>
+    </header>
+        <h1>
+            Js EVENTS
+        </h1>
+        <main>
+            <ul id="checklist">
+                <li class="edit">
+                    <span>Elma</span>
+                    <input value="Elma"/>
+                </li>
+                <li>
+                    <span>Portakal</span>
+                    <input value="Portakal"/>
+                </li>
+                <li>
+                    <span>Muz</span>
+                    <input value="Muz"/>
+                </li>
+            </ul>
+        </main>
+    <div id="hareket">
+        hareket edecek kısım
+    </div>
+    <div></div>
+    <p id="tik"></p>
+
+<h1>fare girişi fare üstünde</h1>
+<div id="d1">
+    <div id="d2"></div>
+</div>
+<p>fare girişi: <span id="s1"></span></p>
+<p>üzerine gelen: <span id="s2"></span></p>
+
+    
+    
+    
+    
+    <script src="/js/events.js"></script>    
+</body>
+</html>

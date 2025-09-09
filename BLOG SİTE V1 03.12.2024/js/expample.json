@@ -1,0 +1,9 @@
+{
+    "name":"mete başkafa",
+    "age": 35,
+    "adress": {
+        "street" : "1296 sk",
+        "city" : "denizli"
+    },
+    "children": ["ege", "ece"]
+}

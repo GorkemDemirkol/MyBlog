@@ -1,0 +1,10 @@
+@import'/public/css/default.css';
+@import'./FontFamily.css';
+@import'./navbar.css';
+@import'./header.css';
+@import'./home.css';
+@import'./sidebar.css';
+@import './post.css';
+@import'./about.css';
+@import'./LogReg.css';
+@import'./add.css';

@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>kullanıcı formu</h1>
+    <form id="myForm">
+        <label for="name">Kullanıcı Adı</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <hr>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <hr>
+        <label for="email">e-posta</label>
+        <input type="email" id="email" name="email" requrired>
+        <br>
+        <hr>
+        <button type="submit">Gönder</button>
+        <button type="button" id="deleteBtn">Sil</button>        
+    </form>
+    <p id="message" class="error"></p>
+    <script src="/js/user.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,82 @@
+.about {
+    padding: 0 20px;
+
+}
+
+
+.about .wrapper {
+    width: 100%;
+    max-width: 1366px;
+    margin: 50px auto;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    display: flex;
+    padding: 10px;
+
+    background-color: antiquewhite;
+}
+
+.about .photo {
+    object-fit: contain;
+    flex: 5px;
+    overflow: hidden;
+    border-radius: 20px;
+
+}
+
+.about .wrapper .photo img {
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+    object-fit: cover;
+   
+}
+
+.about .wrapper .photo img:hover{
+    transform: scale(1.2);
+}
+
+.about .text {
+    font-family: "arvo", serif;
+    line-height: 25px;
+    padding: 10px;
+    flex: 2px;
+}
+
+.about .text h1 {
+    font-family: "Pacifico", cursive;
+    padding: 10px;
+
+}
+
+.about .text p::first-letter{
+    margin-left: 25px;
+}
+
+
+.about img{
+    
+    max-height: 300px;
+    
+}
+/* scroll animation */
+
+.about .wrapper{
+    opacity: 0;
+    transition: all 1s;
+
+}
+
+.about .wrapper.active{
+    opacity: 1;
+
+}
+
+.about .wrapper .text{
+    transform: translateX(-20px);
+    transition: all 0.5s;
+}
+
+.about .wrapper.active .text{
+    transform: translateX(0px)
+}

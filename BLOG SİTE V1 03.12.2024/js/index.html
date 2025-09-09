@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>js</p>
+    <p id="fonksiyon">
+    </p>
+    <p id="temprutare"></p>
+    <p id="kisi"></p>
+    <p id="tamIsim"></p>
+    <p id="obje"> </p>
+    <p id="text"></p>
+    <p id="dizi"></p>
+    <p id="stok"></p>
+    <p id="stok2"></p>
+    <p id="stok3"></p>
+    <p id="muz"></p>
+    <p id="ögrenciler"></p>
+    <hr>
+    <p id="öğrenciYasi"></p>
+    <hr>
+    <p id="Otel1"></p>
+    <p id="Otel2"></p>
+    <p id="Otel3"></p>
+    <button onclick="document.getElementById('saat').innerHTML=Date()"
+        style="border: 1px solid black; width: 80px; height: 20px; border-radius: 5px; display:flex; background-color: rgb(117, 117, 157);">
+        Saat Kaç
+    </button>
+
+    <p id="saat"></p>
+
+    <button onclick="this.innerHTML=new Date()"> Saat Kaç </button>
+
+    <script>
+        let number = 3.14;
+        let round = Math.round(number);
+        console.log(round);
+        console.log('murat' + ' ' + 'arpacioglu');
+        console.log('$' + 47.45);
+        console.log('$' + (2095 + 799) * 0.01);
+        // alert('sepet tutarınız'+'  '+((2095+799)/100));
+        console.log("Murat'in");
+
+        let x = 3;
+        let y = 4;
+        console.log(x += y);
+        console.log(x **= y);
+
+        let a = true; //Boolean
+        let b = false; //Boolean
+
+        const person = {
+            firstName: " murat ",
+            lastname: "arpacıoğlu"
+
+        };
+
+        const color = "yellow";
+        const cars = ["mercedes", "volvo", "bmw"];
+
+        function myFunction(p1, p2) {
+            return p1 * p2;
+        }
+        let result = myFunction(4, 3);
+        console.log(result);
+        document.getElementById("fonksiyon").innerHTML = result;
+
+        let sicaklik = 77;
+        let text = "hava sıcaklığı  " + sicalikDonusturucu(sicaklik) + " Santigrad Derece"
+        document.getElementById("temprutare").innerHTML = text;
+        function sicalikDonusturucu(fahrenheid) {
+            return (fahrenheid - 32) / 1.8;
+        }
+
+        const persons = {
+            firstName: "Murat",
+            lastName: "Arpacıoğlu",
+            yaş: 35,
+            eyeColor: "Kahve",
+            marriager: 'Evli',
+            child: 1,
+            // fullName: function(){
+
+            //     return    this.firstName + ' ' + this.lastName;
+
+            // }
+        };
+
+        // persons.fullName = function(){
+        //     return    this.firstName + ' ' + this.lastName.toUpperCase();
+        // };
+
+        persons.nation = "Türkiye"
+        // document.getElementById("kisi").innerHTML=persons.firstName+ " " +  persons.lastName + "'nun" + " " + persons.child +" çocuğu vardır."
+        // document.getElementById("tamIsim").innerHTML= persons.fullName();
+        // document.getElementById("obje").innerHTML= persons;
+
+        let texts = " ";
+        for (let x in persons) {
+            texts += persons[x] + " ";
+
+        }
+
+        document.getElementById("text").innerHTML = texts;
+
+        const dizi = Object.values(persons);
+        document.getElementById("dizi").innerHTML = dizi;
+
+        const pcStock = { hp: 300, dell: 1200, casper: 150, apple: 50 };
+        let stockInfo = " ";
+        for (let [Stock, amount] of Object.entries(pcStock)) {
+            stockInfo += Stock + ": " + amount + "<br>"
+        }
+        document.getElementById("stok").innerHTML = stockInfo;
+
+
+        document.getElementById("stok2").innerHTML = JSON.stringify(persons);
+
+
+        function fruits(name, color, size, soft, taste) {
+            this.namediff = name;
+            this.colordiff = color;
+            this.sizediff = size;
+            this.softnessdiff = soft;
+            this.tastediff = taste;
+        }
+        const muz = new fruits("muz", "sarı", "orta", "hard", "sweet");
+        const elma = new fruits("elma", "kırmızı", "orta", "hard", "sweet");
+        const kavun = new fruits("kavun", "sarı", "büyük", "soft", "sweet");
+        fruits.prototype.store = "manav";
+
+
+
+
+        document.getElementById("muz").innerHTML = " benim seçtiğim meyvenin " + muz.colordiff + " ve " + muz.softnessdiff + " diğer meyvenin özellikleri " + elma.namediff + " rengi " + elma.sizediff;
+
+        // confirm("TEBRİKLER");
+        // prompt("DOĞRULAMA KODUNU GİR");
+        // if(1>0) alert("doğru");
+        var k = -10;
+        // if(k<0) k= -k;
+        // console.log(k);
+
+        if (typeof k == "number")
+            console.log("sayı int")
+
+        var m = 1000;
+        if (m >= 1000) m = m * 0.85;
+        console.log(m);
+
+        var nb = 3.8;
+        if (nb % 2 == 0)
+            sonuc = "çift";
+        else
+            sonuc = "tek";
+
+        if (Math.round(nb))
+            sonuc = Math.round(nb)
+        console.log(sonuc);
+
+        // if (protocol == "http") description = "hypertext trasfer protocol";
+        // else if (protocol == "https") description = "secure hypertext trasfer protocol";
+        // else if (protocol == "ftp") description = "file trasfer protokol";
+        // else description = "unsuported protocol";
+
+        // switch (protocol) {
+        //     case "http": description = "hypertext trasfer protocol";
+        //         break;
+        //     case "https": description = "secure hypertext trasfer protocol";
+        //         break;
+        //     case "ftp": description = "file trasfer protokol";
+        //         break;
+        //     default: description = "unsuported protocol";
+        // }
+        // var v = +prompt("bir ile beş arasında değer girin?");
+        // var h = "";
+        // switch (v) {
+        //     case 1: h += "1";
+        //         break;
+        //     case 2: h += "2";
+        //         break;
+        //     case 3: h += "3";
+        //         break;
+        //     case 4: h += "4";
+        //         break;
+        //     default: h += "5";
+        // }
+        // alert(h);
+        var myList = ['elma', 'armut', 'muz', 'portakal'];
+        // myList[4] = 'kavun';
+        // myList.forEach(function(value, index){
+        //     console.log(value, index);
+        // })
+        var defa = 0;
+        // while(defa<10) {
+        //     console.log(defa+1, 'defa denedim');
+        //     defa++;
+        // }
+        do {
+            console.log((defa + 1) + 'defa denedim')
+            defa++;
+        }
+        while (defa < 10) { }
+
+        for (var i = 0; i < 10; i++) {
+            // console.log('i :' + i)
+            console.log(myList[i]);
+        }
+
+    </script>
+    <script src="index.js"></script>
+
+
+</body>
+
+</html>

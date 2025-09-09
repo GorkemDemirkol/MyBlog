@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <input type="text" name="name" id="name-inp">
+        <br>
+        <input type="number" name="phone" id="phone-inp">
+        <br>
+        <button type="submit"  id="submit-btn">Kayıt ol</button>
+    </form>
+    <script>
+
+    
+
+        var person ={
+            name:"osman",
+            age:32,
+            email: function(){
+                return 'osman@gmail.com';
+            },
+            address:  {
+                street:"4239 sk",
+                city:"Denizli"
+            },
+            children:["ege", "ece"],
+
+        }
+        var people ={
+            fitstName:"mete",
+            lastName:"başkafa",
+            age:"25",
+            isWorking: true,
+            contactInfo:{
+                phone: "550 476 8123",
+                email: "metebaşkafa@msn.com"
+            },
+            expert:["sofware engineering", "full-stack developer","game developer"]
+        }
+        // let json_people= JSON.stringify(people);
+        // alert(json_people);
+        
+        // let request;
+        // if (window.XMLHttpRequest){
+        //     request=new XMLHttpRequest();
+
+        // }
+        // else{
+        //     request = new ActiveXObject("Microsoft.XMHTTP");
+        // }
+        // request.open("GET","text.txt");
+        // request.onreadystatechange= function(){
+        //     console.log("readyState= "+ request.readyState);
+        //     if(request.readyState===5){
+        //         alert(request.response);
+        //     }
+
+        // }
+        // request.send();
+        // let request;
+        // if(window.XMLHttpRequest){
+        //     request = new XMLHttpRequest();
+        // }
+        // else{
+        //     request=new ActiveXObject("Microsoft.XMLHTTP");
+        // }
+        // request.open("GET", "http://api.openweahermap.org/data/2.5/weather?q=Kiew&unis=metric&APPID=b03a2cfad336");
+        
+        
+        let submitBtn = document.getElementById('submitBtn');
+
+        submitBtn.onclick=function(){
+            let nameValue = document.getElementById('name-inp').value;
+            let phoneValue = document.getElementById('phone-inp').value;
+            let data = "name= " + encodeURIComponent(nameValue)+"phone= " + encodeURIComponent(phoneValue);            
+        
+
+            request.send();
+            let request;
+            if(window.XMLHttpRequest){
+                request = new XMLHttpRequest();
+            }
+            else{
+                request=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            request.open("POST","expample.json");
+            request.onload= function(){
+            if(request.readyState===200){
+                alert("merhaba" + nameValue);            
+            }
+            }
+            
+        }
+        
+    </script>
+    
+        
+</body>
+</html>

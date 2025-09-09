@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="Email">Email</label>
+    <input type="text" id="textEmail" onkeyup="validateEmail()">
+    <script>
+        function validateEmail(){
+            var emailTextBox= document.getElementById('textEmail');
+            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9._%+-]+\.[a-zA-Z]{2,}$/;
+            if(emailRegex.test(emailTextBox)){
+                emailTextBox.style.backgroundColor="green";
+            }
+            else{
+                emailTextBox.style.backgroundColor="red";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+.posts {
+    flex: 9;
+    height: 30px;
+    /* background-color: aquamarine; */
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.posts .post {
+    width:calc(50% - 20px);
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
+}
+@media(max-width:1100px){
+    .posts .post{
+        width: 100%;
+        border: 2px solid rgba(0, 0, 0, 0.3);
+        padding: 15px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+
+    }
+}
+
+.posts h1 {
+    font-family: "Pacifico", cursive;
+
+}
+
+.posts img {
+    width: 100%;
+    padding: 5px;
+    border-radius: 20px;
+    height: 300px;
+    object-fit: cover;
+
+}
+
+.posts p {
+    padding: 5px;
+    font-family: "Arvo", serif;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    line-height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.posts .authorAndDate {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.posts .authorAndDate span:nth-child(1) {
+    font-family: "Dancing Script", cursive;
+}
+
+.posts .authorAndDate span:nth-child(2) {
+    font-family: "Ubuntu Mono", monospace;
+
+}
+
+/* Buraya scroll Js ini entegre ediyoruz  */
+.posts .post{
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: all 1s;
+}
+.posts .post:nth-child(2){
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: all 1.5s;
+}
+.posts .post:nth-child(3){
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: all 2s;
+}
+.posts .post:nth-child(4){
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: all 2.5s;
+}
+.posts .post.active{
+    transform: translateX(0px);
+    opacity: 1;
+}
